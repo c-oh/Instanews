@@ -1,0 +1,19 @@
+{
+  "name": "instanews",
+  "version": "1.0.0",
+  "description": "instanews is the best news",
+  "main": "main.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dumplinghub/instanews_app.git"
+  },
+  "author": "Holly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dumplinghub/instanews_app/issues"
+  },
+  "homepage": "https://github.com/dumplinghub/instanews_app#readme"
+}
