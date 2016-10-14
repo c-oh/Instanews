@@ -3,23 +3,99 @@ html {
     font-size: 16px;
 }
 
+// fonts
+@font-face {
+    font-family: 'open_sans';
+    src: url('../../assets/fonts/opensans-bold-webfont.eot');
+    src: url('../../assets/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/opensans-bold-webfont.woff') format('woff'), url('../assets/fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sans';
+    src: url('../../assets/fonts/opensans-bolditalic-webfont.eot');
+    src: url('../../assets/fonts/opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/opensans-bolditalic-webfont.woff') format('woff'), url('../../assets/fonts/opensans-bolditalic-webfont.svg#open_sansbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'open_sans';
+    src: url('../../assets/fonts/opensans-light-webfont.eot');
+    src: url('../../assets/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/opensans-light-webfont.woff') format('woff'), url('../../assets/fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sans';
+    src: url('../../assets/fonts/opensans-lightitalic-webfont.eot');
+    src: url('../../assets/fonts/opensans-lightitalic-webfont.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/opensans-lightitalic-webfont.woff') format('woff'), url('../../assets/fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic') format('svg');
+    font-weight: light;
+    font-style: italic;
+}
+
+//colors
+$black: black;
+$white: white;
+$light_grey: #c2c2c2;
+
+//sizes
+$padding1: 20px;
+$smallfont: 0.87rem;
+
+//fonts
+$font_0: 'open_sans' serif;
+
+html {
+    font-size: 16px;
+}
+
 .site {
-    background-color: black;
+    background-color: $black;
     width: 100%;
     height: 100%;
-    color: white;
-}
-
-.site {
+    color: $white;
     display: flex;
-    -webkit-flex-direction: column/* works with row or column */
-    -webkit-align-items: center;
+    flex-direction: column;
     align-items: center;
-    -webkit-justify-content: center;
     justify-content: center;
+    @media screen and (min-width: 600px) {
+        flex-direction: row;
+    }
+    @media screen and (min-width: 1000px) {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: $padding1;
+    }
 }
 
-.copyright {
-    color: #c2c2c2;
-    font-family: 'Open Sans' serif;
+.logo {
+    padding-bottom: $padding1;
+    @media screen and (min-width: 1000px) {
+        padding-right: $padding1;
+    }
+}
+
+.search_options {
+    margin-left: $padding1;
+    sections {
+        font-family: $font_0;
+    }
+    font-family: $font_0;
+    p {
+        padding-bottom: $padding1;
+    }
+}
+
+footer {
+    font-family: $font_0;
+    font-size: $smallfont;
+    color: $light_grey;
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    font-weight: light;
+    font-style: normal;
 }
