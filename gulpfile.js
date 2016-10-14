@@ -6,12 +6,20 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   cssnano = require('gulp-cssnano'),
+  lint = require('gulp-eslint'),
+  notify = require('gulp-notify'),
   rename = require('gulp-rename');
 
 
-gulp.task('js', function () {
+var plumberErrorHandler = {
+  errorHandler: notify.onError({
+    title: 'gulp',
+    message: 'Error: <%= error.message %>' 
+  })
+};
+
+gulp.task('js', ['lint'], function () {
   gulp.src('./js/*.js') // what files do we want gulp to consume?
-    //.pipe(plumber())
     .pipe(uglify()) //uglify minifies the files, pipe chains files together
     .pipe(rename({
       extname: '.min.js'
@@ -21,6 +29,7 @@ gulp.task('js', function () {
 
 gulp.task('sass', function () {
   gulp.src('./sass/style.scss')
+    .pipe(plumber(plumberErrorHandler))
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
@@ -41,9 +50,18 @@ gulp.task('browser-sync', function () {
   gulp.watch(["build/css/*.css", "build/js/*.js"]).on('change', browserSync.reload);
 });
 
+//ES LINT
 gulp.task('watch', function () {
-  gulp.watch('js/*.js', ['js']);
+  gulp.watch('js/*.js', ['js', 'eslint']);
   gulp.watch('sass/*.scss', ['sass']);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
+
+
+gulp.task('lint', function () {
+  return gulp.src('./js/*js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+})
