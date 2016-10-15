@@ -24,7 +24,7 @@ html {
     font-family: 'open_sans';
     src: url('../../assets/fonts/opensans-light-webfont.eot');
     src: url('../../assets/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/opensans-light-webfont.woff') format('woff'), url('../../assets/fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
-    font-weight: light;
+    font-weight: lighter;
     font-style: normal;
 }
 
@@ -32,7 +32,7 @@ html {
     font-family: 'open_sans';
     src: url('../../assets/fonts/opensans-lightitalic-webfont.eot');
     src: url('../../assets/fonts/opensans-lightitalic-webfont.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/opensans-lightitalic-webfont.woff') format('woff'), url('../../assets/fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic') format('svg');
-    font-weight: light;
+    font-weight: lighter;
     font-style: italic;
 }
 
@@ -46,7 +46,7 @@ $padding1: 20px;
 $smallfont: 0.87rem;
 
 //fonts
-$font_0: 'open_sans' serif;
+$font_0: 'open_sans', serif;
 
 html {
     font-size: 16px;
@@ -96,6 +96,6 @@ footer {
     position: absolute;
     bottom: 0;
     height: 70px;
-    font-weight: light;
+    font-weight: lighter;
     font-style: normal;
 }

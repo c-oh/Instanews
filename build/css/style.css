@@ -62,14 +62,14 @@ html {
   font-family: 'open_sans';
   src: url("../../assets/fonts/opensans-light-webfont.eot");
   src: url("../../assets/fonts/opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/opensans-light-webfont.woff") format("woff"), url("../../assets/fonts/opensans-light-webfont.svg#open_sanslight") format("svg");
-  font-weight: light;
+  font-weight: lighter;
   font-style: normal; }
 
 @font-face {
   font-family: 'open_sans';
   src: url("../../assets/fonts/opensans-lightitalic-webfont.eot");
   src: url("../../assets/fonts/opensans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/opensans-lightitalic-webfont.woff") format("woff"), url("../../assets/fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic") format("svg");
-  font-weight: light;
+  font-weight: lighter;
   font-style: italic; }
 
 html {
@@ -108,18 +108,18 @@ html {
 
 .search_options {
   margin-left: 20px;
-  font-family: "open_sans" serif; }
+  font-family: "open_sans", serif; }
   .search_options sections {
-    font-family: "open_sans" serif; }
+    font-family: "open_sans", serif; }
   .search_options p {
     padding-bottom: 20px; }
 
 footer {
-  font-family: "open_sans" serif;
+  font-family: "open_sans", serif;
   font-size: 0.87rem;
   color: #c2c2c2;
   position: absolute;
   bottom: 0;
   height: 70px;
-  font-weight: light;
+  font-weight: lighter;
   font-style: normal; }
