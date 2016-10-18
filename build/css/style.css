@@ -114,13 +114,6 @@ header {
           flex-direction: row;
       padding-left: 20px; } }
 
-header.sticky {
-  line-height: 48px;
-  height: 48px;
-  background: black;
-  text-align: left;
-  transition: all 0.4s ease; }
-
 footer {
   color: #c2c2c2;
   font-size: 0.87rem;
@@ -135,18 +128,16 @@ footer {
   display: flex;
   -ms-flex-flow: wrap;
       flex-flow: wrap; }
+  .stories .links {
+    width: 25%; }
 
 .articles {
   height: 400px;
   background-size: cover;
-  background-position: center center;
-  text-decoration: none; }
+  background-position: center center; }
   .articles p {
-    -ms-flex-line-pack: end;
-        align-content: flex-end; }
-
-.links {
-  width: 25%; }
-  .links article {
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap; }
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    opacity: 0.75;
+    text-align: left; }
