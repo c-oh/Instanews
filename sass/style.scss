@@ -108,10 +108,15 @@ footer {
 }   
      
 }
-.loading_thing{
+.loader-section{
+    margin: 0 auto;
+    text-align: center;   
+    .loading_thing{
         display:none;
         height: 100px;
     }
+}
+
 
 .articles {
     height: 400px;
