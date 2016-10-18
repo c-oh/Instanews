@@ -141,10 +141,14 @@ footer {
 .articles {
   height: 400px;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  display: -ms-flexbox;
+  display: flex; }
   .articles p {
     text-decoration: none;
     color: white;
     background-color: black;
     opacity: 0.75;
-    text-align: left; }
+    text-align: left;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
