@@ -82,6 +82,9 @@ body {
     body {
       padding-left: 20px; } }
 
+a {
+  text-decoration: none; }
+
 header {
   display: -ms-flexbox;
   display: flex;
