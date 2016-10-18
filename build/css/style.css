@@ -94,6 +94,7 @@ header {
   text-align: center;
   position: relative;
   top: 50%;
+  height: auto;
   transform: translateY(50%); }
   header .logo {
     padding-bottom: 20px; }
@@ -113,24 +114,39 @@ header {
           flex-direction: row;
       padding-left: 20px; } }
 
+header.sticky {
+  line-height: 48px;
+  height: 48px;
+  background: black;
+  text-align: left;
+  transition: all 0.4s ease; }
+
 footer {
   color: #c2c2c2;
   font-size: 0.87rem;
   position: absolute;
   bottom: 0;
-  height: 40px;
+  height: auto;
   display: inline-block;
   text-align: center; }
 
-/*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+.stories {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap; }
 
+.articles {
+  height: 400px;
+  background-size: cover;
+  background-position: center center;
+  text-decoration: none; }
+  .articles p {
+    -ms-flex-line-pack: end;
+        align-content: flex-end; }
 
-/*<section class="grid">
-			<div class="stories"> </div>
-			<img src="assets/images/ajax-loader.gif" alt="Loading thing">
-		</section>*/
+.links {
+  width: 25%; }
+  .links article {
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }

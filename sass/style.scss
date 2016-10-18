@@ -63,9 +63,10 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-     position: relative;
+    position: relative;
     top: 50%;
-  transform: translateY(50%);
+    height: auto;
+    transform: translateY(50%);
     .logo {
         padding-bottom: $padding1;
     }
@@ -85,25 +86,42 @@ header {
     }
 }
 
+header.sticky {
+  line-height: 48px;
+  height: 48px;
+  background: $black;
+  text-align: left;
+  transition: all 0.4s ease;
+}
+
 footer {
     color: $light_grey;
     font-size: $smallfont;
     position: absolute;
     bottom: 0;
-    height: 40px;
+    height: auto;
     display: inline-block;
     text-align: center;
 }
 
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.stories {
+    display: flex;
+    flex-flow: wrap;
+     
 }
 
-
-/*<section class="grid">
-			<div class="stories"> </div>
-			<img src="assets/images/ajax-loader.gif" alt="Loading thing">
-		</section>*/
+.articles {
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    text-decoration: none;
+    p{
+        align-content: flex-end;
+    }
+}
+.links {
+     width: 25%;
+     article{
+    flex-flow: row wrap;
+    }
+}

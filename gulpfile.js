@@ -6,7 +6,7 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   cssnano = require('gulp-cssnano'),
-  lint = require('gulp-eslint'),
+  eslint = require('gulp-eslint'),
   notify = require('gulp-notify'),
   rename = require('gulp-rename');
 
@@ -18,13 +18,20 @@ var plumberErrorHandler = {
   })
 };
 
-gulp.task('js', ['lint'], function () {
+gulp.task('js', ['eslint'], function () {
   gulp.src('./js/*.js') // what files do we want gulp to consume?
     .pipe(uglify()) //uglify minifies the files, pipe chains files together
     .pipe(rename({
       extname: '.min.js'
     })) //we're renaming the ugly file'
-    .pip(gulp.dest('./build/js')) //where are we putting the result?
+    .pipe(gulp.dest('./build/js')) //where are we putting the result?
+});
+
+gulp.task('eslint', function () {
+  return gulp.src(['./js/*js'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 });
 
 gulp.task('sass', function () {
@@ -57,11 +64,3 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
-
-
-gulp.task('lint', function () {
-  return gulp.src('./js/*js')
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-})
