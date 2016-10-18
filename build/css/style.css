@@ -131,6 +131,10 @@ footer {
   .stories .links {
     width: 25%; }
 
+.loading_thing {
+  display: none;
+  height: 100px; }
+
 .articles {
   height: 400px;
   background-size: cover;
