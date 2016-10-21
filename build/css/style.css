@@ -82,6 +82,9 @@ body {
     body {
       padding-left: 20px; } }
 
+a {
+  text-decoration: none; }
+
 header {
   display: -ms-flexbox;
   display: flex;
@@ -114,10 +117,12 @@ header {
           flex-direction: row;
       padding-left: 20px; } }
 
+.grid {
+  margin-bottom: 5%; }
+
 footer {
   color: #c2c2c2;
   font-size: 0.87rem;
-  position: absolute;
   bottom: 0;
   height: auto;
   display: inline-block;
@@ -131,13 +136,24 @@ footer {
   .stories .links {
     width: 25%; }
 
+.loader-section {
+  margin: 0 auto;
+  text-align: center; }
+  .loader-section .loading_thing {
+    display: none;
+    height: 100px; }
+
 .articles {
   height: 400px;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  display: -ms-flexbox;
+  display: flex; }
   .articles p {
     text-decoration: none;
     color: white;
     background-color: black;
     opacity: 0.75;
-    text-align: left; }
+    text-align: left;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }

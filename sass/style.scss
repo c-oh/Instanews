@@ -56,6 +56,9 @@ body {
         padding-left: $padding1;
     }
 }
+a{
+    text-decoration: none;
+}
 
 header {
     display: flex;
@@ -85,12 +88,13 @@ header {
         padding-left: $padding1;
     }
 }
-
+.grid{
+    margin-bottom: 5%;
+}
 
 footer {
     color: $light_grey;
     font-size: $smallfont;
-    position: absolute;
     bottom: 0;
     height: auto;
     display: inline-block;
@@ -102,14 +106,24 @@ footer {
     flex-flow: wrap;
     .links {
      width: 25%;
-}
+}   
      
 }
+.loader-section{
+    margin: 0 auto;
+    text-align: center;   
+    .loading_thing{
+        display:none;
+        height: 100px;
+    }
+}
+
 
 .articles {
     height: 400px;
     background-size: cover;
     background-position: center center;
+    display: flex;
  
     p{
         text-decoration: none;
@@ -117,6 +131,7 @@ footer {
         background-color: $black;
         opacity: 0.75;
         text-align: left;
+        align-self: flex-end;
         
     }
 }
