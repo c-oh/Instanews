@@ -88,12 +88,13 @@ header {
         padding-left: $padding1;
     }
 }
-
+.grid{
+    margin-bottom: 5%;
+}
 
 footer {
     color: $light_grey;
     font-size: $smallfont;
-    position: absolute;
     bottom: 0;
     height: auto;
     display: inline-block;

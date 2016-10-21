@@ -117,10 +117,12 @@ header {
           flex-direction: row;
       padding-left: 20px; } }
 
+.grid {
+  margin-bottom: 5%; }
+
 footer {
   color: #c2c2c2;
   font-size: 0.87rem;
-  position: absolute;
   bottom: 0;
   height: auto;
   display: inline-block;
