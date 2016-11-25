@@ -1,5 +1,5 @@
 
-## Project Name: Instanews - New York Times News Site
+## Instanews - New York Times News Site
 
 The goal for this project was to tap into the New York Times API to dynamically generate news stories based on the category the user selects. 
 
