@@ -75,20 +75,20 @@ header {
           flex-direction: row;
       padding-left: 20px; } }
 
-.header-shrink {
+.header-minify {
   height: auto; }
-  .header-shrink .logo {
+  .header-minify .logo {
     width: 100px;
     height: 100px; }
   @media screen and (min-width: 600px) {
-    .header-shrink {
+    .header-minify {
       height: 150px;
       -ms-flex-pack: start;
           justify-content: flex-start;
       display: -ms-flexbox;
       display: flex; } }
   @media screen and (min-width: 1000px) {
-    .header-shrink {
+    .header-minify {
       max-width: 50%;
       height: 135px; } }
 

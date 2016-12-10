@@ -1,0 +1,9 @@
+footer {
+    color: $light_grey;
+    font-size: $smallfont;
+    height: auto;
+    text-align: center;
+    @media screen and (min-width: $tablet) {
+        margin: none;
+    }
+}
