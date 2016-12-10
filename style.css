@@ -44,7 +44,7 @@ table {
 html {
   font-size: 16px; }
 
-.header {
+.headers {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -57,18 +57,18 @@ html {
   top: 50%;
   height: auto;
   transform: translateY(50%); }
-  .header .logo {
+  .headers .logo {
     padding-bottom: 20px; }
-  .header .search_options {
+  .headers .search_options {
     margin-left: 20px; }
-  .header p {
+  .headers p {
     padding-bottom: 20px; }
   @media screen and (min-width: 600px) {
-    .header {
+    .headers {
       -ms-flex-direction: row;
           flex-direction: row; } }
   @media screen and (min-width: 1000px) {
-    .header {
+    .headers {
       -ms-flex-pack: start;
           justify-content: flex-start;
       -ms-flex-direction: row;

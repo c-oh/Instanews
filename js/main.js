@@ -5,7 +5,14 @@ $(document).ready(function () {
 $('#sections').change(function () {
     $('.loading_thing').show();
 
-  var url = 'https://api.nytimes.com/svc/topstories/v2/home.json';
+ $('.headers').addClass('header-minify');
+
+  var $news = $('.stories');
+
+  var optSelect = $('#sections').val();
+
+  var url = 'https://api.nytimes.com/svc/topstories/v2/' + optSelect + '.json';
+
   url += '?' + $.param({
     'api-key':'2cee7ea7b62f4e7d83a741c409dae5e4'
   });
@@ -16,6 +23,7 @@ $('#sections').change(function () {
   })
 
   .done(function (data) {
+    $news.empty();
     var info = [];
     info = $(data.results).filter(function (key, value) {
       return $(value.multimedia).length >= 5;
