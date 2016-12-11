@@ -6,6 +6,7 @@ $('#sections').change(function () {
     $('.loading_thing').show();
 
  $('.headers').addClass('header-minify');
+  $('.site').addClass('site-minify');
 
   var $news = $('.stories');
 

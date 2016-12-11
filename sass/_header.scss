@@ -1,3 +1,10 @@
+.site{
+    height: 80vh;
+}
+
+.site-minify{
+        height: 225vh;
+}
 
 .headers {
     display: flex;
@@ -41,7 +48,6 @@
        font-size: 0.75rem;
     }
 
-	
 	@media screen and (min-width: $tablet)  {
 		height: auto;
 		justify-content: flex-start;
