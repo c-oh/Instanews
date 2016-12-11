@@ -28,19 +28,35 @@
 }
 
 .header-minify{
-	height: auto;
-	.logo {
-		width: 100px;
-    	height: 100px;
+	height: 250px;
+     transform: none;
+	.logo img{
+		width: 125px;
+    	height: 125px;
 	}
+    .search_options{
+        margin:0;
+    }
+    p{
+       font-size: 0.75rem;
+    }
+
 	
 	@media screen and (min-width: $tablet)  {
-		height: 150px;
+		height: auto;
 		justify-content: flex-start;
         display:flex;
+        padding: 2rem;
+        .logo{
+            flex: 0 1 25%;
+            img{
+                height:70px;
+            }
+        }
+
 	}
 	@media screen and (min-width: $desktop)  {
 		max-width: 50%;
-    	height: 135px;
+        padding:none;
 	}
 }
