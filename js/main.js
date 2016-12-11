@@ -1,16 +1,18 @@
 $(document).ready(function () {
 
-});
 
-$('#sections').change(function () {
+
+$('#mySelect').heapbox({
+  'onChange': function(){
     $('.loading_thing').show();
+    
 
  $('.headers').addClass('header-minify');
   $('.site').addClass('site-minify');
 
   var $news = $('.stories');
 
-  var userSelect = $('#sections').val();
+  var userSelect = $('#mySelect').val();
 
   var url = 'https://api.nytimes.com/svc/topstories/v2/' + userSelect + '.json';
 
@@ -41,12 +43,15 @@ $('#sections').change(function () {
       
   })
 
-  .always(function(){
-          $('.loading_thing').hide();
-    })
-
+  
   .fail(function(error){
       $news.append('<p class="error"> Sorry! There is a problem with your request, please try again. </p>');
     })
-
+    .always(function(){
+          $('.loading_thing').hide();
+    });
+  }
 });
+
+})
+
