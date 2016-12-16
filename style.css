@@ -44,7 +44,13 @@ table {
 html {
   font-size: 16px; }
 
-header {
+.site {
+  height: 80vh; }
+
+.site-minify {
+  height: 225vh; }
+
+.headers {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -57,40 +63,51 @@ header {
   top: 50%;
   height: auto;
   transform: translateY(50%); }
-  header .logo {
+  .headers .logo {
     padding-bottom: 20px; }
-  header .search_options {
+  .headers .search_options {
     margin-left: 20px; }
-  header p {
+  .headers p {
     padding-bottom: 20px; }
   @media screen and (min-width: 600px) {
-    header {
+    .headers {
       -ms-flex-direction: row;
           flex-direction: row; } }
   @media screen and (min-width: 1000px) {
-    header {
+    .headers {
       -ms-flex-pack: start;
           justify-content: flex-start;
       -ms-flex-direction: row;
           flex-direction: row;
       padding-left: 20px; } }
 
-.header-shrink {
-  height: auto; }
-  .header-shrink .logo {
-    width: 100px;
-    height: 100px; }
+.header-minify {
+  height: 250px;
+  transform: none; }
+  .header-minify .logo img {
+    width: 125px;
+    height: 125px; }
+  .header-minify .search_options {
+    margin: 0; }
+  .header-minify p {
+    font-size: 0.75rem; }
   @media screen and (min-width: 600px) {
-    .header-shrink {
-      height: 150px;
+    .header-minify {
+      height: auto;
       -ms-flex-pack: start;
           justify-content: flex-start;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      padding: 2rem; }
+      .header-minify .logo {
+        -ms-flex: 0 1 25%;
+            flex: 0 1 25%; }
+        .header-minify .logo img {
+          height: 70px; } }
   @media screen and (min-width: 1000px) {
-    .header-shrink {
+    .header-minify {
       max-width: 50%;
-      height: 135px; } }
+      padding: none; } }
 
 body {
   background-color: black;
@@ -98,9 +115,6 @@ body {
   height: auto;
   color: white;
   font-family: "open_sans", serif; }
-  @media screen and (min-width: 1000px) {
-    body {
-      padding-left: 20px; } }
 
 a {
   text-decoration: none; }
@@ -181,10 +195,17 @@ footer {
   color: #c2c2c2;
   font-size: 0.87rem;
   height: auto;
-  text-align: center; }
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 1%; }
   @media screen and (min-width: 600px) {
     footer {
       margin: none; } }
+  @media screen and (min-width: 1000px) {
+    footer {
+      padding: 18px 0;
+      text-align: left;
+      padding-left: 20px; } }
 
 html {
   font-size: 16px; }

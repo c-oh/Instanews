@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Instanews - NYT News </title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="themes/pumpkin.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="/build/css/style.min.css ">
 </head>
 
 <body>
 	<div class="site">
-		<header class="header">
+		<header class="headers">
 			<div class="logo">
 				<img src="assets/images/nyt-logo.svg" alt="NYT Logo">
 			</div>
 			<form class="search" action="#" method="post">
 				<div class="search_options">
 					<p>Choose a section:</p>
-					<select name="sections">
- 					<option value="">Sections ...</option>
-  					<option value= "home">Home</option>
-					<option value= "science">Science</option>
-  					<option value="business">Business</option>
-  					<option value="sports">Sports</option>
-  					<option value="technology">Technology</option>
-  					<option value="fashion">Fashion</option>
+					<select id="mySelect">
+ 					<option value="section">Sections...</option>
+		  		<option value="world">World</option>
+		  		<option value="business">Business</option>
+		  		<option value="health">Health</option>
+		  		<option value="travel">Travel</option>
+		  		<option value="fashion">Fashion</option>
+		  		<option value="food">Food</option>
 				</select>
 				</div>
 			</form>
 		</header>
-		<section class="grid">
 		<div class="loader-section">
-			<img src="assets/images/ajax-loader.gif" alt="Loading thing" class= "loading_thing">
+			<img src="assets/images/ajax-loader.gif" alt="Loading thing" class="loading_thing">
 		</div>
-			<div class="stories"> 
-			</div>
-			
-		</section>
-		<footer class="footer">
-			<div class="copyright">
-				<p>© Copyright 2016 INSTANEWS</p>
-			</div>
-		</footer>
+		<ul class="stories">
+			<!-- API loads here -->
+		</ul>
 	</div>
-	<script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<!-- end of container -->
+	<footer class="footer">
+		<div class="copyright">
+			<p>&copy; Copyright 2016 instanews</p>
+		</div>
+	</footer>
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+					crossorigin="anonymous"></script>
+	<script src="build/js/heapbox.min.js"></script>
 	<script src="build/js/main.min.js"></script>
 </body>
 
